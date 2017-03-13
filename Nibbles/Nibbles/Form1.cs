@@ -21,8 +21,10 @@ namespace Nibbles
         
 
         int ticks = 0;
+        static int gwidth = 22;
+        static int gheight = 22;
 
-        Snake snake = new Snake(1, 10, 10);
+        Snake snake = new Snake(1, gwidth, gheight);
 
         //update tick counter
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,10 +35,12 @@ namespace Nibbles
             snake.move();
             xposDispl.Text = snake.getHeadx().ToString();
             yposDispl.Text = snake.getHeady().ToString();
+
+            drawSnake();
         }
 
 
-
+        //changes snake direction on key press
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -58,5 +62,42 @@ namespace Nibbles
             }
 
         }
+
+        //draws snake onto the panel
+        private void drawSnake()
+        {
+            Graphics g = mapPanel.CreateGraphics();
+            System.Drawing.SolidBrush snakeBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Yellow);
+            System.Drawing.SolidBrush groundBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Blue);
+
+            //clear field
+            g.FillRectangle(groundBrush, 0,0, mapPanel.Width, mapPanel.Height);
+
+            //paint head
+            int xsector = mapPanel.Width / gwidth;
+            int ysector = mapPanel.Height / gheight;
+            int[,] m = snake.getMatrix();
+            int xdim = m.GetLength(0);
+            int ydim = m.GetLength(1);
+
+            for (int i = 0; i < xdim; i++)
+            {
+                for (int j = 0; j < ydim; j++)
+                {
+                    if (m[i, j] > 0)
+                    {
+                        g.FillRectangle(snakeBrush, i * xsector, j * ysector, xsector, ysector);
+                    }
+                }
+            }
+            
+
+
+
+            snakeBrush.Dispose();
+            g.Dispose();
+
+        }
+
     }
 }

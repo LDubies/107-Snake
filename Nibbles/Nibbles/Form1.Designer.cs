@@ -37,28 +37,31 @@
             this.xposDispl = new System.Windows.Forms.Label();
             this.yposDispl = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mapPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.11267F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.88733F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.70588F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.29412F));
             this.tableLayoutPanel1.Controls.Add(this.xposLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.yposLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.timerLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.timerCountLabel, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.xposDispl, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.yposDispl, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.mapPanel, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.03922F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.96078F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(284, 261);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 284F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 431);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // xposLabel
@@ -67,7 +70,7 @@
             this.xposLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xposLabel.Location = new System.Drawing.Point(3, 0);
             this.xposLabel.Name = "xposLabel";
-            this.xposLabel.Size = new System.Drawing.Size(141, 49);
+            this.xposLabel.Size = new System.Drawing.Size(301, 45);
             this.xposLabel.TabIndex = 0;
             this.xposLabel.Text = "x";
             // 
@@ -75,9 +78,9 @@
             // 
             this.yposLabel.AutoSize = true;
             this.yposLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yposLabel.Location = new System.Drawing.Point(3, 49);
+            this.yposLabel.Location = new System.Drawing.Point(3, 45);
             this.yposLabel.Name = "yposLabel";
-            this.yposLabel.Size = new System.Drawing.Size(141, 53);
+            this.yposLabel.Size = new System.Drawing.Size(301, 48);
             this.yposLabel.TabIndex = 1;
             this.yposLabel.Text = "y";
             // 
@@ -85,9 +88,9 @@
             // 
             this.timerLabel.AutoSize = true;
             this.timerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timerLabel.Location = new System.Drawing.Point(3, 102);
+            this.timerLabel.Location = new System.Drawing.Point(3, 93);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(141, 159);
+            this.timerLabel.Size = new System.Drawing.Size(301, 53);
             this.timerLabel.TabIndex = 2;
             this.timerLabel.Text = "Timer Ticks";
             // 
@@ -95,9 +98,9 @@
             // 
             this.timerCountLabel.AutoSize = true;
             this.timerCountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timerCountLabel.Location = new System.Drawing.Point(150, 102);
+            this.timerCountLabel.Location = new System.Drawing.Point(310, 93);
             this.timerCountLabel.Name = "timerCountLabel";
-            this.timerCountLabel.Size = new System.Drawing.Size(131, 159);
+            this.timerCountLabel.Size = new System.Drawing.Size(163, 53);
             this.timerCountLabel.TabIndex = 3;
             this.timerCountLabel.Text = "0";
             // 
@@ -105,9 +108,9 @@
             // 
             this.xposDispl.AutoSize = true;
             this.xposDispl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xposDispl.Location = new System.Drawing.Point(150, 0);
+            this.xposDispl.Location = new System.Drawing.Point(310, 0);
             this.xposDispl.Name = "xposDispl";
-            this.xposDispl.Size = new System.Drawing.Size(131, 49);
+            this.xposDispl.Size = new System.Drawing.Size(163, 45);
             this.xposDispl.TabIndex = 4;
             this.xposDispl.Text = " ";
             // 
@@ -115,22 +118,32 @@
             // 
             this.yposDispl.AutoSize = true;
             this.yposDispl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yposDispl.Location = new System.Drawing.Point(150, 49);
+            this.yposDispl.Location = new System.Drawing.Point(310, 45);
             this.yposDispl.Name = "yposDispl";
-            this.yposDispl.Size = new System.Drawing.Size(131, 53);
+            this.yposDispl.Size = new System.Drawing.Size(163, 48);
             this.yposDispl.TabIndex = 5;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 3000;
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // mapPanel
+            // 
+            this.mapPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.mapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mapPanel.Location = new System.Drawing.Point(3, 149);
+            this.mapPanel.Name = "mapPanel";
+            this.mapPanel.Size = new System.Drawing.Size(301, 279);
+            this.mapPanel.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(476, 431);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.Name = "Form1";
@@ -152,6 +165,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label xposDispl;
         private System.Windows.Forms.Label yposDispl;
+        private System.Windows.Forms.Panel mapPanel;
     }
 }
 

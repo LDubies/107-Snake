@@ -11,33 +11,37 @@ namespace Nibbles
         //properties
         //****************************
         int height, width;
+        int[,] matrix;
         int speed;
-        int length = 5;
+        int length = 7;
 
         int headx = 5;
         int heady = 5;
 
+        
+
         //1,...,4 for up,...,left clockwise
-         public int dir = 1;
+        public int dir = 1;
         bool crashed = false;
 
 
 
         //constructor
         //****************************
-        public Snake(int _speed, int _height, int _width)
+        public Snake(int _speed, int _width, int _height)
         {
             this.speed = _speed;
             this.height = _height;
             this.width = _width;
 
-            int[,] pos = new int[height, width];
+            matrix = new int[width, height];
+            matrix[headx, heady] = length;
         }
 
         //methods
         //****************************
 
-            //getter & setter 4 head pos
+        //getter & setter 4 head pos
         public int getHeadx()
         {
             return headx;
@@ -56,6 +60,11 @@ namespace Nibbles
         public void setHeady(int y)
         {
            heady = y;
+        }
+
+        public int[,] getMatrix()
+        {
+            return matrix;
         }
 
 
@@ -90,6 +99,9 @@ namespace Nibbles
                 crashed = true;
             }
 
+            matrix = reduce(matrix);
+            matrix[headx, heady] = length;
+
          
         }
 
@@ -104,6 +116,26 @@ namespace Nibbles
             }
 
             return inBounds;
+        }
+
+        //reduces all values >0 in matrix by 1
+        private int[,] reduce(int[,] m)
+        {
+            int xdim = m.GetLength(0);
+            int ydim = m.GetLength(1);
+
+            for (int i = 0; i < xdim; i++)
+            {
+                for (int j = 0; j < ydim; j++)
+                {
+                    if (m[i,j] > 0)
+                    {
+                        m[i, j] = m[i, j] - 1;
+                    }
+                }
+            }
+
+            return m;
         }
     }
 }
