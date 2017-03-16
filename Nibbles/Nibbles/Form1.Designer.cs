@@ -36,8 +36,8 @@
             this.timerCountLabel = new System.Windows.Forms.Label();
             this.xposDispl = new System.Windows.Forms.Label();
             this.yposDispl = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mapPanel = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,9 +59,9 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.03922F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.96078F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 284F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(476, 431);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 442F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(597, 540);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // xposLabel
@@ -70,7 +70,7 @@
             this.xposLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xposLabel.Location = new System.Drawing.Point(3, 0);
             this.xposLabel.Name = "xposLabel";
-            this.xposLabel.Size = new System.Drawing.Size(301, 45);
+            this.xposLabel.Size = new System.Drawing.Size(380, 30);
             this.xposLabel.TabIndex = 0;
             this.xposLabel.Text = "x";
             // 
@@ -78,9 +78,9 @@
             // 
             this.yposLabel.AutoSize = true;
             this.yposLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yposLabel.Location = new System.Drawing.Point(3, 45);
+            this.yposLabel.Location = new System.Drawing.Point(3, 30);
             this.yposLabel.Name = "yposLabel";
-            this.yposLabel.Size = new System.Drawing.Size(301, 48);
+            this.yposLabel.Size = new System.Drawing.Size(380, 33);
             this.yposLabel.TabIndex = 1;
             this.yposLabel.Text = "y";
             // 
@@ -88,9 +88,9 @@
             // 
             this.timerLabel.AutoSize = true;
             this.timerLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timerLabel.Location = new System.Drawing.Point(3, 93);
+            this.timerLabel.Location = new System.Drawing.Point(3, 63);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(301, 53);
+            this.timerLabel.Size = new System.Drawing.Size(380, 34);
             this.timerLabel.TabIndex = 2;
             this.timerLabel.Text = "Timer Ticks";
             // 
@@ -98,9 +98,9 @@
             // 
             this.timerCountLabel.AutoSize = true;
             this.timerCountLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timerCountLabel.Location = new System.Drawing.Point(310, 93);
+            this.timerCountLabel.Location = new System.Drawing.Point(389, 63);
             this.timerCountLabel.Name = "timerCountLabel";
-            this.timerCountLabel.Size = new System.Drawing.Size(163, 53);
+            this.timerCountLabel.Size = new System.Drawing.Size(205, 34);
             this.timerCountLabel.TabIndex = 3;
             this.timerCountLabel.Text = "0";
             // 
@@ -108,9 +108,9 @@
             // 
             this.xposDispl.AutoSize = true;
             this.xposDispl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xposDispl.Location = new System.Drawing.Point(310, 0);
+            this.xposDispl.Location = new System.Drawing.Point(389, 0);
             this.xposDispl.Name = "xposDispl";
-            this.xposDispl.Size = new System.Drawing.Size(163, 45);
+            this.xposDispl.Size = new System.Drawing.Size(205, 30);
             this.xposDispl.TabIndex = 4;
             this.xposDispl.Text = " ";
             // 
@@ -118,10 +118,22 @@
             // 
             this.yposDispl.AutoSize = true;
             this.yposDispl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.yposDispl.Location = new System.Drawing.Point(310, 45);
+            this.yposDispl.Location = new System.Drawing.Point(389, 30);
             this.yposDispl.Name = "yposDispl";
-            this.yposDispl.Size = new System.Drawing.Size(163, 48);
+            this.yposDispl.Size = new System.Drawing.Size(205, 33);
             this.yposDispl.TabIndex = 5;
+            // 
+            // mapPanel
+            // 
+            this.mapPanel.BackColor = System.Drawing.SystemColors.Highlight;
+            this.mapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapPanel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.mapPanel.Location = new System.Drawing.Point(3, 100);
+            this.mapPanel.MaximumSize = new System.Drawing.Size(450, 350);
+            this.mapPanel.MinimumSize = new System.Drawing.Size(450, 350);
+            this.mapPanel.Name = "mapPanel";
+            this.mapPanel.Size = new System.Drawing.Size(450, 350);
+            this.mapPanel.TabIndex = 6;
             // 
             // timer1
             // 
@@ -129,21 +141,11 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // mapPanel
-            // 
-            this.mapPanel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.mapPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapPanel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.mapPanel.Location = new System.Drawing.Point(3, 149);
-            this.mapPanel.Name = "mapPanel";
-            this.mapPanel.Size = new System.Drawing.Size(301, 279);
-            this.mapPanel.TabIndex = 6;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 431);
+            this.ClientSize = new System.Drawing.Size(597, 540);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.Name = "Form1";
